@@ -1,8 +1,6 @@
 const removeFromArray = function(array, ...numbersToRemove) {
-
-    let newArray = array;
-
-    newArray.splice(numbersToRemove - 1, 1);
+    
+    let newArray = array.filter(number => number != numbersToRemove)
 
     return newArray;
 
