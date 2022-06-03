@@ -1,4 +1,10 @@
 const sumAll = function(...numbers) {
+    if(numbers.some(number => number < 0)){
+        return 'ERROR'
+    }
+    if(numbers.some(value => typeof(value) != 'number')){
+        return 'ERROR'
+    }
 
     let min = Math.min(...numbers);
     let max = Math.max(...numbers);
